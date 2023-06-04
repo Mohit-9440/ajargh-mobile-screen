@@ -17,10 +17,9 @@
         width: 100vw;
     }
     .product-main-bottom{
-        /* margin-top: 20px; */
         background-color: rgb(228, 245, 245);
-        /* height: 50vh; */
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         display: flex;
         flex-direction: column;
         bottom: 0;
@@ -37,14 +36,26 @@
         /* padding: 20px; */
     }
     .product-header-left{
-        width: 70%;
+        width: 60%;
     }
     .product-header-right{
-        width: 30%;
+        width: 40%;
+    }
+    .product-quantity-stock{
+        display: flex;
+        flex-direction: row-reverse;
     }
     .product-quantity-div{
         display: flex;
         flex-direction: row-reverse;
+    }
+    .product-quantity-div button{
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: gray;
+        color: black;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .product-size-section-div{
         display: flex;
@@ -56,8 +67,8 @@
         justify-content: space-between;
     }
     .product-sizes{
-        border: 1px solid black;
-        border-radius: 20px;
+        border: 1px solid gray;
+        border-radius: 30px;
         padding: 10px;
     }
     .product-price-buttons-div{

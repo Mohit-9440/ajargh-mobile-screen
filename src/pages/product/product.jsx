@@ -19,7 +19,9 @@ const product = () => {
                   <div className='product-quantity-div'>
                     <button>- 1 +</button>
                   </div>
-                  <p>Available in Stock</p>
+                  <div className='product-quantity-stock'>
+                    <p>Available in Stock</p>
+                  </div>
                 </div>
               </div>
             </section>
