@@ -1,6 +1,10 @@
 import React from 'react';
 import './home.css';
 import Products from '../../components/Products/Products';
+import {HiUser} from 'react-icons/hi'
+import { GoHome,GoBell } from "react-icons/go";
+import {IoCartSharp} from 'react-icons/io5'
+import {FaSearch} from 'react-icons/fa'
 
 const Home = () => {
   return (
@@ -17,18 +21,25 @@ const Home = () => {
                 <h3>Our Fashions App</h3>
             </div>
         </section>
-        <section className='search-section'>
-            <div>
+        <section className='search-filter-section'>
+            <div className='search-div'>
+                <FaSearch style={{marginLeft:'10px', fontSize:'20px'}}/>
                 <input
                     type="text"
                     placeholder="Search..."
+                    className="search-input"
                 />
-                <button type="submit">Search</button>
+            </div>
+            <div className='filter-div'>
+                <img src={require('../../assets/filtter.png')} alt=""/>
             </div>
         </section>
         <section className='features-section'>
             <div class="features-div">
-                <img src={require('../../assets/features1.png')} alt=""/>
+                <div className='features-img-wrapper'>
+                    <img src={require('../../assets/features1.png')} alt=""/>
+                    <img src={require('../../assets/features1.png')} alt=""/>
+                </div>
             </div>
         </section>
         <section className='arrivals-section'>
@@ -38,37 +49,19 @@ const Home = () => {
                     <p>View All</p>
                 </div>
                 <Products/>
-                {/* <div className='arrivals-products'>
-                    <div className='arrivals-product'>
-                        <img src={require('../../assets/product1.png')} alt=""/>
-                        <h2>The Marc Jacobs</h2>
-                        <p>Traveler Tote</p>
-                        <p>$195.00</p>
-                    </div>
-                    
-                </div>
-                <div className='arrivals-products'>
-                    <div className='arrivals-product'>
-                        <img src={require('../../assets/product1.png')} alt=""/>
-                        <h2>The Marc Jacobs</h2>
-                        <p>Traveler Tote</p>
-                        <p>$195.00</p>
-                    </div>
-                    <div className='arrivals-product'>
-                        <img src={require('../../assets/product2.png')} alt=""/>
-                        <h2>Axel Arigato</h2>
-                        <p>Clean 90 Triple Sneakers</p>
-                        <p>$245.00</p>
-                    </div>
-                </div> */}
             </div>
         </section>
         <section className='navigation-section'>
             <div className='navigation-div'>
-                <div>Home</div>
-                <div>Cart</div>
-                <div>Notif</div>
-                <div>User</div>
+                <div className='navigation-div-but nav-home'>
+                    <div className='nav-home-svg'>
+                        <GoHome />
+                    </div>
+                    Home
+                </div>
+                <div className='navigation-div-but'><IoCartSharp className='nav-icon'/></div>
+                <div className='navigation-div-but'><GoBell className='nav-icon'/></div>
+                <div className='navigation-div-but'><HiUser className='nav-icon'/></div>
             </div>
         </section>
     </div>

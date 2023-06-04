@@ -4,6 +4,7 @@
         flex-direction: column;
         height: 100vh;
         width: 100vw;
+        font-family: 'Poppins', sans-serif;
     }
     /* Menu Section */
     .menu-section{
@@ -15,37 +16,66 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     /* Title Section */
     .title-div{
         display: flex;
         flex-direction: column;
+        padding-left: 20px;
+        font-family: po;
     }
     .title-section h1{
         font-weight: 700;
-        color: black;
+        color: #000000;
+        font-size: 25px;
     }
     .title-section h3{
-        font-weight: 500;
-        color: gray;
+        font-weight: 700;
+        color: #666666;
+        font-size: 25px;
+        margin: 2px;
     }
     /*Features Section*/
-    .features-section{
-        margin: 20px;
+    .features-div{
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .features-img-wrapper{
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+    .features-img-wrapper img{
+        width: 100%;
+        object-fit: cover;
+        margin-right: 10px;
     }
     /*Arrivals Section*/
     .arrivals-section{
         height: 200px;
+    }
+    .arrivals-div{
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .arrivals-head{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 10px;
     }
     .arrivals-head h1{
-        
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .arrivals-head p{
+        font-weight: 600;
+        font-size: 11px;
     }
     .arrivals-products{
         display: flex;
@@ -55,11 +85,13 @@
     .arrivals-product img{
         border-radius: 10px;
     }
-    .arrivals-product h2{
-        font-size: 18px;
-    }
     .arrivals-product p{
+        font-style: normal;
+        font-weight: 600;
         font-size: 14px;
+        margin: auto;
+        margin-top: 4px;
+        text-align: center;
     }
     
     /*Navigation Section*/
@@ -79,5 +111,51 @@
         flex-direction: row;
         justify-content: space-around;
         padding: 20px;
+        align-items: center;
+    }
+    .nav-icon{
+        font-size: 25px;
+    }
+    .nav-home{
+        /* border: 1px solid; */
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+    .nav-home-svg{
+        font-size: 25px;
+        margin-right: 10px;
+    }
+    /*Search*/
+    .search-div {
+        display: flex;
+        align-items: center;
+        background-color: #eceaea;
+        padding: 8px;
+        width: 70%;
+        border-radius: 20px;
+    }
+      
+    .search-input {
+        flex: 1;
+        padding: 6px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: #333;
+        margin-left: 10px;
+    }
+      
+    .search-icon {
+        color: #333;
+        margin-left: 8px;
+        cursor: pointer;
+    }
+    .search-filter-section{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-between;
     }
 }
