@@ -67,10 +67,10 @@
         background-color: white;
         border-top-left-radius: 20px;
         box-shadow: 0px 0px 6px #8f8f8f;
+        border-top-right-radius: 20px;
         left: 0;
         height: auto;
         width: 100%;
-        border-top-right-radius: 20px;
         bottom: 0;
         position: fixed;
     }
