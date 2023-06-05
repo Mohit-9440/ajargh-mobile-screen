@@ -20,6 +20,20 @@ export default function Product() {
       setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
+  const [selectedSize, setSelectedSize] = useState(null);
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
+  };
+  const getDivStyles = (size) => {
+    if (size === selectedSize) {
+      return {
+        backgroundColor: 'black',
+        color: 'white',
+      };
+    }
+    return {};
+  };
 
   return (
     <div className='product'>
@@ -58,11 +72,11 @@ export default function Product() {
                 <h1>Size</h1>
               </div>
               <div className='product-size-sizes'>
-                <div className='product-sizes'>S</div>
-                <div className='product-sizes'>M</div>
-                <div className='product-sizes'>L</div>
-                <div className='product-sizes'>XL</div>
-                <div className='product-sizes'>XXL</div>
+                <div className='product-sizes' style={getDivStyles('S')} onClick={() => handleSizeClick('S')}>S</div>
+                <div className='product-sizes' style={getDivStyles('M')} onClick={() => handleSizeClick('M')}>M</div>
+                <div className='product-sizes' style={getDivStyles('L')} onClick={() => handleSizeClick('L')}>L</div>
+                <div className='product-sizes' style={getDivStyles('XL')} onClick={() => handleSizeClick('XL')}>XL</div>
+                <div className='product-sizes' style={getDivStyles('XXl')} onClick={() => handleSizeClick('XXl')}>XXL</div>
               </div>
             </section>
             <section className='product-description-section'>
