@@ -30,12 +30,15 @@
         font-weight: 700;
         color: #000000;
         font-size: 25px;
+        font-family: 'poppins';
+        margin-bottom: auto;
     }
     .title-section h3{
         font-weight: 700;
         color: #666666;
-        font-size: 25px;
+        font-size: 23px;
         margin: 2px;
+        font-family: 'poppins';
     }
     /*Features Section*/
     .features-div{
@@ -114,18 +117,28 @@
         align-items: center;
     }
     .nav-icon{
-        font-size: 25px;
+        font-size: 22px;
+        margin-top: 6px;
     }
     .nav-home{
-        /* border: 1px solid; */
-        border-radius: 10px;
+        border: 1px solid;
+        border-radius: 24px;
         display: flex;
+        align-items: center;
         flex-direction: row;
-        padding: 10px;
+        padding: 7px;
+        background-color: lightgray;
+        font-family: 'poppins';
+        font-weight: 700;
     }
     .nav-home-svg{
-        font-size: 25px;
-        margin-right: 10px;
+        font-size: 22px;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        border: 1px black solid;
+        border-radius: 26px;
+        margin: -6px 8px -7px -6px;
     }
     /*Search*/
     .search-div {
@@ -158,4 +171,5 @@
         padding: 20px;
         justify-content: space-between;
     }
+    
 }

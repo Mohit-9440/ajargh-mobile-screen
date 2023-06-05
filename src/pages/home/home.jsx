@@ -2,8 +2,9 @@ import React from 'react';
 import './home.css';
 import Products from '../../components/Products/Products';
 import {HiUser} from 'react-icons/hi'
-import { GoHome,GoBell } from "react-icons/go";
+import {GoBell } from "react-icons/go";
 import {IoCartSharp} from 'react-icons/io5'
+import {AiFillHome} from 'react-icons/ai'
 import {FaSearch} from 'react-icons/fa'
 
 const Home = () => {
@@ -55,7 +56,7 @@ const Home = () => {
             <div className='navigation-div'>
                 <div className='navigation-div-but nav-home'>
                     <div className='nav-home-svg'>
-                        <GoHome />
+                        <AiFillHome />
                     </div>
                     Home
                 </div>
