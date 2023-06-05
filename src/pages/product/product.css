@@ -181,3 +181,28 @@
         background-color:#fff ;
     }
 }
+@media (max-width: 380px) {
+    .svg-heart{
+        top: 240px;
+        left: 300px;
+    }
+    .svg-bag{
+        top: 45px;
+        left: 300px;
+    }
+    .product-price-buttons-div h5{
+        font-size: 12px;
+    }
+    .product-price-buttons-div h2{
+        font-size: 18px;
+    }
+    .product-sizes{
+        border: 1px solid gray;
+        border-radius: 30px;
+        padding: 5px 10px;
+    }
+    .price-buttons-right button{
+        font-size: 15px;
+        padding: 15px 40px;
+    }
+}
