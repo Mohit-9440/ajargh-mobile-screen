@@ -1,113 +1,105 @@
 
 .payment-form {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    background-color: #ffe1e6;
-    flex-direction: column;
-    padding: 20px;
-    font-family: 'Poppins';
-  }
-  
-  .payment-form h1 {
-    text-align: center;
-  }
-  
-  .payment-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .payment-form label {
-    margin-bottom: 8px;
-  }
-  
-  .payment-form input {
-    padding: 8px;
-    margin-bottom: 16px;
-  }
-  
-  .payment-form .error {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  .payment-form button {
-    padding: 8px 16px;
-    background-color: #de1459;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-family: 'Poppins';
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  background-color: #ffe1e6;
+  flex-direction: column;
+  padding: 20px;
+  font-family: 'Poppins';
+}
 
-  }
-  
-  .payment-form button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .payment-form .payment-message {
-    margin-top: 16px;
-    text-align: center;
-  }
-  
-  .payment-form .payment-message p {
-    margin-bottom: 8px;
-  }
-  
-  .payment-form .payment-message button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  .payment-label{
-    margin-bottom: 8px;
-  }
-  .payment-input{
-    display: flex;
-    align-items: center;
-  }
-  .payment-input input{
-    width: 100%;
-    border: none;
-  }
-  .expiration-security-wrap{
-    display: flex; 
-  }
-  .expiration-wrap{
-    margin-right: 5px;
-  }
-  .security-wrap{
-    margin-left: 5px;
-  }
-  .payment-box{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    background-color: #ffe1e6;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins';
+.payment-form h1 {
+  text-align: center;
+}
 
-  }
-  .payment-box svg{
-    font-size: 35px;
-    color: gray;
-  }
-  .payment-box h2{
-    margin-top: 20px;
-  }
-  .payment-box p{
-    margin: auto;
-    font-family: 'Poppins';
-  }
-  .card-icon{
-    position: relative;
+.payment-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form label {
+  margin-bottom: 8px;
+}
+
+.payment-form input {
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.payment-form button {
+  padding: 8px 16px;
+  background-color: #de1459;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins';
+}
+
+.payment-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.payment-form .payment-message {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.payment-form .payment-message p {
+  margin-bottom: 8px;
+}
+
+.payment-form .payment-message button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.payment-label{
+  margin-bottom: 8px;
+}
+.payment-input{
+  display: flex;
+  align-items: center;
+}
+.payment-input input{
+  width: 100%;
+  border: none;
+}
+.expiration-security-wrap{
+  display: flex; 
+}
+.expiration-wrap{
+  margin-right: 5px;
+}
+.security-wrap{
+  margin-left: 5px;
+}
+.payment-box{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: #ffe1e6;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins';
+}
+.payment-box svg{
+  font-size: 35px;
+  color: gray;
+}
+.payment-box h2{
+  margin-top: 20px;
+}
+.payment-box p{
+  margin: auto;
+  font-family: 'Poppins';
+}
+.card-icon{
+  position: relative;
   display: inline-flex;
   align-items: center;
-  }
+}

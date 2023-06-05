@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './payment.css'
 import {FiLoader} from 'react-icons/fi'
-import {TbBrandMastercard} from 'react-icons/tb'
 import {AiOutlineCheckCircle, AiFillQuestionCircle} from 'react-icons/ai'
 const PaymentForm = () => {
   const [cardNumber, setCardNumber] = useState('');
@@ -14,7 +13,6 @@ const PaymentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate form fields
      // Perform validation
      const cardNumberPattern = /^\d{16}$/;
      const nameOnCardPattern = /^[A-Za-z\s]+$/;
