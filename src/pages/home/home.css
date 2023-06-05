@@ -173,3 +173,20 @@
     }
     
 }
+@media (max-width: 380px) {
+    .menu-section{
+        margin-top: 10px;
+    }
+    .product-wrap-arrivals{
+        gap: 20px;
+    }
+    .navigation-div{
+        padding: 10px;
+    }
+    .nav-icon{
+        font-size: 20px;
+    }
+    .nav-home-svg{
+        font-size: 12px;
+    }
+}
