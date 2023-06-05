@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './payment.css'
 import {FiLoader} from 'react-icons/fi'
+import {TbBrandMastercard} from 'react-icons/tb'
 import {AiOutlineCheckCircle, AiFillQuestionCircle} from 'react-icons/ai'
 const PaymentForm = () => {
   const [cardNumber, setCardNumber] = useState('');
   const [nameOnCard, setNameOnCard] = useState('');
   const [expirationDate, setExpirationDate] = useState('');
   const [securityCode, setSecurityCode] = useState('');
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
   const [isProcessing, setIsProcessing] = useState(false);
   const [isPaymentReceived, setIsPaymentReceived] = useState(false);
 
@@ -15,25 +16,32 @@ const PaymentForm = () => {
     e.preventDefault();
 
     // Validate form fields
-    const errors = {};
+     // Perform validation
+     const cardNumberPattern = /^\d{16}$/;
+     const nameOnCardPattern = /^[A-Za-z\s]+$/;
+     const expirationDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+     const securityCodePattern = /^\d{3}$/;
+    // const errors = {};
 
-    if (!cardNumber) {
-      errors.cardNumber = 'Card number is required';
+    if (!cardNumberPattern.test(cardNumber)) {
+      alert('Invalid card number');
+      return;
     }
 
-    if (!nameOnCard) {
-      errors.nameOnCard = 'Name on card is required';
+    if (!nameOnCardPattern.test(nameOnCard)) {
+      alert('Invalid name on card');
+      return;
     }
 
-    if (!expirationDate) {
-      errors.expirationDate = 'Expiration date is required';
+    if (!expirationDatePattern.test(expirationDate)) {
+      alert('Invalid expiration date');
+      return
     }
 
-    if (!securityCode) {
-      errors.securityCode = 'Security code is required';
+    if (!securityCodePattern.test(securityCode)) {
+      alert('Invalid security code');
+      return;
     }
-
-    if (Object.keys(errors).length === 0) {
       // Show payment processing dialog
       setIsProcessing(true);
 
@@ -42,18 +50,12 @@ const PaymentForm = () => {
         // Hide payment processing dialog and show payment received message
         setIsProcessing(false);
         setIsPaymentReceived(true);
-
         // Reset form
         setCardNumber('');
         setNameOnCard('');
         setExpirationDate('');
         setSecurityCode('');
-        setErrors({});
-      }, 200); // Simulating a 2-second processing delay
-    } else {
-      // Display validation errors
-      setErrors(errors);
-    }
+      }, 2000); // Simulating a 2-second processing delay
   };
 
   return (
@@ -63,7 +65,8 @@ const PaymentForm = () => {
         <div className='payment-label'>
           <label htmlFor="cardNumber">Card Number</label>
         </div>
-        <div className='payment-input'>
+        <div className='payment-input card-icon'>
+          <TbBrandMastercard style={{marginLeft:'10px', fontSize:'20px'}}/>
           <input
             type="text"
             id="cardNumber"
@@ -71,7 +74,7 @@ const PaymentForm = () => {
             value={cardNumber}
             onChange={(e) => setCardNumber(e.target.value)}
           />
-          {errors.cardNumber && <span className="error">{errors.cardNumber}</span>}
+          {/* {errors.cardNumber && <span className="error">{errors.cardNumber}</span>} */}
         </div>
 
         <div className='payment-label'>
@@ -85,7 +88,7 @@ const PaymentForm = () => {
             value={nameOnCard}
             onChange={(e) => setNameOnCard(e.target.value)}
           />
-          {errors.nameOnCard && <span className="error">{errors.nameOnCard}</span>}
+          {/* {errors.nameOnCard && <span className="error">{errors.nameOnCard}</span>} */}
         </div>
         <div className='expiration-security-wrap'>
         <div className='expiration-wrap'>
@@ -100,7 +103,7 @@ const PaymentForm = () => {
               value={expirationDate}
               onChange={(e) => setExpirationDate(e.target.value)}
             />
-            {errors.expirationDate && <span className="error">{errors.expirationDate}</span>}
+            {/* {errors.expirationDate && <span className="error">{errors.expirationDate}</span>} */}
           </div>
         </div>
         <div className='security-wrap'>
@@ -115,7 +118,7 @@ const PaymentForm = () => {
               value={securityCode}
               onChange={(e) => setSecurityCode(e.target.value)}
             />
-            {errors.securityCode && <span className="error">{errors.securityCode}</span>}
+            {/* {errors.securityCode && <span className="error">{errors.securityCode}</span>} */}
           </div>
         </div>
           

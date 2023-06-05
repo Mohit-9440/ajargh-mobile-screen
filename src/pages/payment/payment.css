@@ -6,6 +6,7 @@
     background-color: #ffe1e6;
     flex-direction: column;
     padding: 20px;
+    font-family: 'Poppins';
   }
   
   .payment-form h1 {
@@ -38,6 +39,8 @@
     color: #fff;
     border: none;
     cursor: pointer;
+    font-family: 'Poppins';
+
   }
   
   .payment-form button:disabled {
@@ -89,6 +92,8 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins';
+
   }
   .payment-box svg{
     font-size: 35px;
@@ -99,4 +104,10 @@
   }
   .payment-box p{
     margin: auto;
+    font-family: 'Poppins';
+  }
+  .card-icon{
+    position: relative;
+  display: inline-flex;
+  align-items: center;
   }
