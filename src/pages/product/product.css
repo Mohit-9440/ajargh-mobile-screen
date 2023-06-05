@@ -4,6 +4,8 @@
         flex-direction: column;
         height: 100vh;
         width: 50vw;
+        font-family: 'Poppins';
+        font-style: normal;
     }
     .product-main-top{
         height: 50vh;
@@ -16,8 +18,41 @@
     .main-image img{
         width: 100vw;
     }
+    .svg-heart{
+        position: absolute;
+        left: 320px;
+        top: 350px;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        padding: 7px;
+        background-color:#fff ;
+    }
+    .svg-volume{
+        position: absolute;
+        left: 6.67%;
+        right: 84%;
+        top: 47px;
+        bottom: 90.27%;
+        height: 30px;
+        border-radius: 30px;
+        padding: 7px 14px;
+        background-color:#000000 ;
+        color: #fff;
+    }
+    .svg-bag{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 320px;
+        top: 47px;
+        height: 30px;
+        border-radius: 30px;
+        padding: 7px;
+        background-color:#fff ;
+    }
     .product-main-bottom{
-        background-color: rgb(228, 245, 245);
+        background-color: #fff;
         padding-left: 20px;
         padding-right: 20px;
         display: flex;
@@ -33,33 +68,80 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        /* padding: 20px; */
+        margin-top: 20px;
     }
     .product-header-left{
         width: 60%;
     }
+    .product-header-left h1{
+        font-weight: 600;
+        font-size: 18px;
+        color: #000000;
+        margin-bottom: 2px;
+        line-height: 22px;
+    }
+    .product-header-left h2{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 22px;
+        color: #666666;
+        margin-top: 2px;
+    }
+    .product-header-left p{
+        font-weight: 400;
+        font-size: 11px;
+        color: rgba(255, 171, 7, 1);
+    }
+    .product-header-left p span{
+        color: #000000;
+
+    }
     .product-header-right{
         width: 40%;
+    }
+    .product-description-div h2{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .product-description-div p{
+        font-size: 11px;
+        font-weight: 400;
+        color: #666666;
+        line-height: 16px;
     }
     .product-quantity-stock{
         display: flex;
         flex-direction: row-reverse;
     }
+    .product-quantity-stock p{
+        font-size: 11px;
+        font-weight: 600;
+    }
     .product-quantity-div{
         display: flex;
         flex-direction: row-reverse;
     }
-    .product-quantity-div button{
-        border: 1px solid black;
+    .product-quantity-div-wrap{
+        display: inline-flex;
+        align-items: center;
+        background-color: #EEEEEE;
+        padding: 5px;
         border-radius: 20px;
-        background-color: gray;
+    }
+    .product-quantity-div button{
         color: black;
-        padding-left: 10px;
-        padding-right: 10px;
+        margin: 0 5px;
+        border: none;
+        background: none;
+        cursor: pointer;
     }
     .product-size-section-div{
         display: flex;
         flex-direction: column;
+    }
+    .product-size-section-div h1{
+        font-size: 16px;
+        font-weight: 600;
     }
     .product-size-sizes{
         display: flex;
@@ -76,5 +158,26 @@
         flex-direction: row;
         align-items: center;
         justify-content:space-between;
+    }
+    .product-price-buttons-div h5{
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 0px;
+    }
+    .product-price-buttons-div h2{
+        margin-top: 1px;
+        font-size: 27px;
+        color: black;
+    }
+    .price-buttons-right button{
+        border-radius: 30px;
+        padding: 15px 50px;
+        background: black;
+        color: white;
+        font-size: 20px;
+        display: flex;
+    }
+    .price-buttons-right button span{
+        margin-left: 10px;
     }
 }

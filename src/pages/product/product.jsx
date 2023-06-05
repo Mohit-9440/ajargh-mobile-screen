@@ -1,23 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './product.css';
+import {HiShoppingBag} from 'react-icons/hi'
+import {BsStarFill} from 'react-icons/bs'
+import {ImVolumeDecrease} from 'react-icons/im'
+import {AiOutlineHeart} from 'react-icons/ai'
 
-const product = () => {
+export default function Product() {
+  const [quantity, setQuantity] = useState(1);
+  const pricePerUnit = 198.00;
+  const totalPrice = quantity * pricePerUnit;
+
+  const handleIncrement = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
   return (
     <div className='product'>
         <div className='product-main-top'>
           <div className='main-image'><img src={require('../../assets/image.png')} alt=""/></div>
+          <div className='main-image-svg'>
+            <AiOutlineHeart className='svg-heart'/>
+            <HiShoppingBag className='svg-bag'/>
+            <ImVolumeDecrease className='svg-volume'/>
+          </div>
         </div>
         <div className='product-main-bottom'>
             <section className='product-header-section'>
               <div className='product-header-div'>
                 <div className='product-header-left'>
                   <h1>Roller Rabbit</h1>
-                  <p> Vado Odelie Dress</p>
-                  <p> ***** (320 Review)</p>
+                  <h2> Vado Odelie Dress</h2>
+                  <p><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/> <span>(320 Review)</span></p>
                 </div>
                 <div className='product-header-right'>
                   <div className='product-quantity-div'>
-                    <button>- 1 +</button>
+                    <div className='product-quantity-div-wrap'>
+                      <button onClick={handleDecrement} disabled={quantity === 1}>-</button>
+                      <span>{quantity}</span>
+                      <button onClick={handleIncrement}>+</button>
+                    </div>
                   </div>
                   <div className='product-quantity-stock'>
                     <p>Available in Stock</p>
@@ -46,11 +74,15 @@ const product = () => {
             <section className='product-price-buttons-section'>
               <div className='product-price-buttons-div'>
                 <div className='price-buttons-left'>
-                  <h7>Total Price</h7>
-                  <h2>$198.00</h2>
+                  <h5>Total Price</h5>
+                  <h2>${totalPrice}</h2>
                 </div>
                 <div className='price-buttons-right'>
-                  <button>Buy Now</button>
+                <Link to="/payment">
+                  <button>
+                    <HiShoppingBag/><span>Buy Now</span>
+                  </button>
+                </Link>
                 </div>
               </div>
             </section>
@@ -58,5 +90,3 @@ const product = () => {
     </div>
   )
 }
-
-export default product
