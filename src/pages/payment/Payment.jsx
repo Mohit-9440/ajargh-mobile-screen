@@ -8,7 +8,6 @@ const PaymentForm = () => {
   const [nameOnCard, setNameOnCard] = useState('');
   const [expirationDate, setExpirationDate] = useState('');
   const [securityCode, setSecurityCode] = useState('');
-  // const [errors, setErrors] = useState({});
   const [isProcessing, setIsProcessing] = useState(false);
   const [isPaymentReceived, setIsPaymentReceived] = useState(false);
 
@@ -65,8 +64,7 @@ const PaymentForm = () => {
         <div className='payment-label'>
           <label htmlFor="cardNumber">Card Number</label>
         </div>
-        <div className='payment-input card-icon'>
-          <TbBrandMastercard style={{marginLeft:'10px', fontSize:'20px'}}/>
+        <div className='payment-input'>
           <input
             type="text"
             id="cardNumber"
@@ -74,7 +72,6 @@ const PaymentForm = () => {
             value={cardNumber}
             onChange={(e) => setCardNumber(e.target.value)}
           />
-          {/* {errors.cardNumber && <span className="error">{errors.cardNumber}</span>} */}
         </div>
 
         <div className='payment-label'>
@@ -88,7 +85,6 @@ const PaymentForm = () => {
             value={nameOnCard}
             onChange={(e) => setNameOnCard(e.target.value)}
           />
-          {/* {errors.nameOnCard && <span className="error">{errors.nameOnCard}</span>} */}
         </div>
         <div className='expiration-security-wrap'>
         <div className='expiration-wrap'>
@@ -103,7 +99,6 @@ const PaymentForm = () => {
               value={expirationDate}
               onChange={(e) => setExpirationDate(e.target.value)}
             />
-            {/* {errors.expirationDate && <span className="error">{errors.expirationDate}</span>} */}
           </div>
         </div>
         <div className='security-wrap'>
@@ -118,7 +113,6 @@ const PaymentForm = () => {
               value={securityCode}
               onChange={(e) => setSecurityCode(e.target.value)}
             />
-            {/* {errors.securityCode && <span className="error">{errors.securityCode}</span>} */}
           </div>
         </div>
           
